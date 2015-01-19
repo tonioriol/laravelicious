@@ -43,11 +43,11 @@ bool | $params['shared'] | Make the item private (Default to true).
 
 #### Returns
 
-An array With `'success'`, `'message'` and  `'url'` fields.
+An associative array With `'success'`, `'message'` and  `'url'` keys.
 
 
-All the methods follow the same structure. The arguments are passed as array, depending on the method some are optional and some required, this way we are able to pass mor flexibly the arguments that we want.
+All the methods follow the same structure. The arguments are passed as array, depending on the method some are optional and some required, this way we are able to pass more flexibly the arguments that we want.
 
-Same for returning values. All methods returns an array with a field 'success' with true on success and false on failure, a 'message' field parsed from the xml (if not exists on the delicious.com response, the field will be empty).
+Same for returning values. All methods returns an array with a field `'success'` with `true` on success and `false` on failure, a `'message'` field parsed from the xml response (if not exists on the delicious.com response, the field will go empty).
 
 When there are trouble connecting to delicious.com, a DeliciousConnectionException will be thrown with some details about the attempts, the url and a message.
