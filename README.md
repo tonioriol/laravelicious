@@ -14,9 +14,9 @@ Require this package with composer using the following command:
 
 First, you need to add the auth params in the config, to do this you will need to publish the config file first. Use the following command:
 
-`php artisan config:publish`
+`php artisan config:publish tr0n/laravelicious`
 
-After that, a config file named `general.php` is generated inside a `/app/config/packages/tr0n/laravelicious/` folder. Add inside the user and password.
+After that, a config file named `general.php` is generated inside the `/app/config/packages/tr0n/laravelicious/` folder. Add the user and password parameters inside this file.
 
 ## Usage
 
@@ -43,11 +43,10 @@ bool | $params['shared'] | Make the item private (Default to true).
 
 #### Returns
 
-An array With 'success', 'bookmark_key', 'inbox_key', 'network_key' fields on success.
-Or With 'success', 'url' and 'message' fields on failure.
+An array With `'success'`, `'message'` and  `'url'` fields.
 
 
-All the methods follow the same structure. The arguments are passed as a array, depending on the method some are optional and some required, this way we are able to pass mor flexibly the arguments that we want.
+All the methods follow the same structure. The arguments are passed as array, depending on the method some are optional and some required, this way we are able to pass mor flexibly the arguments that we want.
 
 Same for returning values. All methods returns an array with a field 'success' with true on success and false on failure, a 'message' field parsed from the xml (if not exists on the delicious.com response, the field will be empty).
 
