@@ -1,0 +1,24 @@
+{
+    "name": "tr0n/laravelicious",
+    "description": "",
+    "authors": [
+        {
+            "name": "Toni Oriol",
+            "email": "hell@tonioriol.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*",
+        "nesbot/Carbon": "*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "Tr0n\\Laravelicious\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
